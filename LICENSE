@@ -1,0 +1,42 @@
+https://groups.google.com/g/alt.sources/c/25Iy6XQxwBk
+-----
+Below are the sources (in C and VHDL) implementing the pseudo-UART
+allowing you to establish communication with your IP core simulated
+in GHDL (http://ghdl.free.fr).
+The simulated core is accesible via pseudoterminal (e.g. /dev/pts/11)
+in Linux or similar system, just as it would be a real hardware
+connected to real hardware port.
+For details see "desc.txt" in attached archive.
+All attached sources are PUBLIC DOMAIN. however I'd be glad if someone
+using them provides information about original sources.
+I'd be also glad to hear about people using this design and about any
+improvements introduced by them.
+
+Wojciech M. Zabolotny
+wzab<at>ise.pw.edu.pl
+-----
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <https://unlicense.org>
