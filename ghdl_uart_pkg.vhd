@@ -3,9 +3,9 @@
 -- Project : GHDL UART
 -------------------------------------------------------------------------------
 -- File : ghdl_uart_pkg.vhd
--- Author : Wojciech M. Zabolotny ( wz...@ise.pw.edu.pl )
+-- Author : Wojciech M. Zabolotny ( ***@ise.pw.edu.pl )
 -- Created : 2011-06-02
--- Last update: 2011-06-02
+-- Last update: 2012-04-08
 -- Platform :
 -- Standard : VHDL'93
 -------------------------------------------------------------------------------
@@ -34,6 +34,11 @@ package ghdl_uart_pkg is
  v : integer)
  return integer;
  attribute foreign of ghdl_pty_write : function is "VHPIDIRECT ghdl_pty_write";
+ function ghdl_pty_setupTerminal (baud : integer)
+ return integer;
+ attribute foreign of ghdl_pty_setupTerminal : function is
+ "VHPIDIRECT ghdl_pty_setupTerminal";
+
 
 end ghdl_uart_pkg;
 
@@ -57,5 +62,12 @@ package body ghdl_uart_pkg is
  begin -- ghdl_pty_write
  assert false severity failure;
  end ghdl_pty_write;
+
+ function ghdl_pty_setupTerminal (baud : integer)
+ return integer is
+ begin
+ assert false severity failure;
+ end ghdl_pty_setupTerminal;
+
 
 end ghdl_uart_pkg;

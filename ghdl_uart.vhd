@@ -3,9 +3,9 @@
 -- Project : GHDL UART
 -------------------------------------------------------------------------------
 -- File : ghdl_uart.vhd
--- Author : Wojciech M. Zabolotny ( wz...@ise.pw.edu.pl )
+-- Author : Wojciech M. Zabolotny ( ***@ise.pw.edu.pl )
 -- Created : 2011-06-02
--- Last update: 2011-06-02
+-- Last update: 2012-04-08
 -- Platform :
 -- Standard : VHDL'93
 -------------------------------------------------------------------------------
@@ -100,6 +100,7 @@ begin -- simul
  variable res : integer;
  begin -- process reading from socket
  res := ghdl_pty_open;
+ --res := ghdl_pty_setupTerminal(115200);
  while true loop
  char_in := ghdl_pty_read;
  if char_in = -2 then
