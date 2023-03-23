@@ -46,6 +46,7 @@ entity ghdl_uart is
 end ghdl_uart;
 
 architecture simul of ghdl_uart is
+ constant Tpd : time := 31.25 ns;
  constant UART_FIFO_LENGTH : integer := 1000;
  type T_UART_FIFO is array (0 to UART_FIFO_LENGTH) of integer;
  signal wr_fifo, rd_fifo : T_UART_FIFO;
@@ -116,7 +117,7 @@ begin -- simul
  assert false report "FIFO overflow!" severity failure;
  else
  rd_fifo(rd_fifo_wp) <= char_in;
- rd_fifo_wp <= new_wp;
+ rd_fifo_wp <= new_wp after Tpd;
  end if;
  end if;
  -- You may customize the value below to change responsivness of
@@ -138,7 +139,7 @@ begin -- simul
  if new_rp = UART_FIFO_LENGTH then
  new_rp := 0;
  end if;
- rd_fifo_rp <= new_rp;
+ rd_fifo_rp <= new_rp after Tpd;
  end if;
  end if;
  end process RD1;
